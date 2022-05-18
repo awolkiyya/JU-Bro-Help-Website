@@ -1,0 +1,260 @@
+/* now starting configuring the css file */
+/* import the google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* creating the css variable using the root element  */
+:root{
+     --header-height:3.5rem;
+     /* the color i used here */
+     --first-color:#fcf403;
+     --first-color-alt:#fcdb03;
+     --first-color-light:#fcca03;
+     --first-color-lighten:#e8e4d5;
+     --second-color:#0fdbf2;
+     --title-color:#021012;
+     --text-link:#000;
+     --text-color:#e8e4d5;
+     --text-color-light:#e8e4d5;
+     --body-color:#FFF;
+     --border-color:#fff;
+     --container-color:#fff;
+     /* the font and typography i used are */
+     --body-font:'Poppins', sans-serif;
+     --biggest-font-size:2.25rem;
+     --h1-font:1.5rem;
+     --h2-font:1.25rem;
+     --h3-font:1rem;
+     --normal-font-size:0.938rem;
+     --small-font-size:0.813rem;
+     --little-font-size:0.75rem;
+     /* the font weight i used */
+     --font-medium:500;
+     --font-semi-bold:600;
+     /* the z index i used */
+     --z-tooltip:10;
+     --z-fixed:100;
+}
+/* ==========chenge dark theme===== */
+.change-theme{
+    color: var(--first-color);
+    font-size:var(--h3-font);
+    cursor: pointer;
+    transition: .3s;
+}
+.change-theme:hover{
+    transform:rotate(120deg)
+}
+body.dark-theme{
+    --first-color:#fcf403;
+    --first-color-alt:#fcdb03;
+    --first-color-light:#fcca03;
+    --first-color-lighten:#e8e4d5;
+    --second-color:#0fdbf2;
+    --title-color:#021012;
+    --text-color:#e8e4d5;
+    --text-color-light:#e8e4d5;
+    --body-color:#000;
+    --border-color:#fff;
+    --container-color:#fff;
+    --text-link:#fff;
+}
+/* to manage the responsiv font and typography */
+@media screen and (min-width: 1023px) {
+     :root{
+        --biggest-font-size:4rem;
+        --h1-font:2.25rem;
+        --h2-font:1.5rem;
+        --h3-font:1.25rem;
+        --normal-font-size:1rem;
+        --small-font-size:0.875rem;
+        --smaller-font-size:0.813rem;
+     }
+}
+/* now start the base styleing */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color:var(--body-color);
+    color: var(--text-color);
+}
+h1,h2,h3{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+a{
+    text-decoration: none;
+    color: var(--text-link);
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+input,button{
+    font-family: var(--body-font);
+    outline: none;
+    border: none;
+}
+/* the reusable css class */
+.container{
+    max-width: 1200px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.grid{
+    display: grid;
+}
+.section{
+    padding: 4.5rem 0.2rem;
+}
+.section__ tittle{
+    font-size:var(--h2-font);
+    margin-bottom: 1rem;
+}
+.section__tittle span{
+    color: var(--second-color);
+}
+.section__subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--second-color);
+}
+.main{
+    overflow: hidden;
+}
+a .span{
+    font-size: var(--h2-font);
+    color: var(--first-color);
+    padding-left:.5rem;
+}
+ul{
+    list-style: none;
+}
+/* header part styling using css */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+    transition: .4s;
+    /* border-bottom: 5px solid var(--first-color); */
+}
+.nav{
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.nav__logo{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .24rem;
+    font-weight: var(--font-medium);
+    font-size: var(--h2-font);
+    transition: .3s;
+}
+.nav__logo:hover{
+    color: var(--first-color);
+    transition: .5s;
+}
+.nav__logo span{
+    border-left: 5px solid var(--first-color);
+}
+@media screen and (max-width: 1023px) {
+    .nav__menu{
+        position: fixed;
+        bottom: 2rem;
+        background-color: var(--container-color);
+        box-shadow: 0 8px 24px hsla(228,66%,45%,.15);
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 1.30rem 2rem;
+        border-radius: 1.25rem;
+        align-items: center;
+    }
+    .group_button{
+        margin-right: 1.5rem;
+    }
+
+    .nav__item{
+        padding-right: 1rem;
+        padding-left: 0.3rem;
+        padding-top: 1.5rem;
+    }
+}
+/* styling the nav list  */
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__item{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.nav__link{
+    color:var(--text-color);
+    display: flex;
+    padding: .5rem;
+    border-radius: 50%;
+}
+li a:hover{
+    color:#000;
+}
+.nav__item:hover{
+    border-bottom: 5px solid  var(--first-color);
+    padding-bottom: 6px;
+    transition: .5s;
+}
+.group_button a{
+    margin-left:0.5rem;
+    border: 1px solid white;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    background-color: var(--first-color);
+    border-radius: 50px;
+    align-items: center;
+}
+/* the advert section styling */
+.advert{
+    height:400px;
+    /* background-color:#fff; */
+    position: relative;
+    top: 70px;
+    /* background-image:var(--first-color); */
+}
+.image img{
+    width:300px;
+    height:300px;
+    overflow: hidden;
+    border-radius:125px 125px 10px 10px;
+}
+.title{
+    text-align: center;
+    font-weight: var(--font-semi-bold);
+}
+.description{
+    text-align: center;
+}
+.r{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 1rem;
+}
+.r h4{
+    color: var(--first-color);
+}
