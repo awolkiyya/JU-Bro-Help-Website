@@ -18,7 +18,7 @@
       <!--this is the header part -->
       <header class="header shadow-sm pb-2" id="header">
              <nav class="nav container">
-                 <a href="#" class="nav__logo">Help<span class="span">Bro</span></a>
+                 <a href="#" class="nav__logo"><div class="brand"><img src="{{ asset("Assets/image/brainstorm.png") }}" alt=""></div>HelpBro</a>
                  <div class="nav__menu">
                      <ul class="nav__list">
                          <li class="nav__item">
@@ -56,26 +56,28 @@
       {{-- the start advert --}}
       <section class="advert container">
              <div class="row">
-                 <div class="col-lg-7 col-sm-12 col-md-6 mt-5">
+                 <div class="col-lg-7 col-sm-12 col-md-6 left">
                        <h1 class="title">
                            Welcome To Our Website
                        </h1>
                        <p class="description">
                            This is website is help your by communicating with you simple
+                           This is website is help your by communicating with you simple
+                           This is website is help your by communicating with you simple
                        </p>
                        <div class="info text-center">
-                            <h5 class="message">The People You Can Get For Communication</h5>
+                            <h5 class="message" style="color: black;">The People You Can Get For Communication</h5>
                             <div class="container">
                                 <div class="row r">
-                                     <div class="col-lg-3 col-md-4 col-sm-12 pl-3">
+                                     <div class="col-lg-3 col-md-4 col-sm-12 pl-3 shadow-lg">
                                          <h4>Students</h4>
                                          <h3>+0</h3>
                                      </div>
-                                     <div class="col-lg-3 col-md-4 col-sm-12">
+                                     <div class="col-lg-3 col-md-4 col-sm-12 shadow-sm">
                                         <h4>Teachers</h4>
                                         <h3>+0</h3>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="col-lg-3 col-md-4 col-sm-12 shadow-lg">
                                         <h4>Prophesers</h4>
                                         <h3>+0</h3>
                                     </div>
@@ -83,9 +85,9 @@
                             </div>
                        </div>
                  </div>
-                 <div class="col-lg-5 col-sm-12 col-md-6">
-                         <div class="image mt-5 ms-5">
-                             <img src="{{ asset("Assets/image/images (1).jpg") }}" alt="The image is not found">
+                 <div class="col-lg-5 col-sm-12 col-md-6 right">
+                         <div class="image mt-5">
+                             <img src="{{ asset("Assets/image/external-advice-training-and-coaching-wanicon-flat-wanicon.png") }}" alt="The image is not found">
                          </div>
                  </div>
              </div>
@@ -100,7 +102,11 @@
       <footer class="footer section">
           
       </footer>
-
+      {{-- animation icon in the page --}}
+      <div class="p"><img src="{{ asset("Assets/image/half-rest.png") }}" alt=""></div>
+      <div class="c"><img src="{{ asset("Assets/image/experimental-camera-arcade.png") }}" alt=""></div>
+      <div class="a"><img src="{{ asset("Assets/image/external-audio-disability-flaticons-flat-flat-icons-3.png") }}" alt=""></div>
+      <div class="v"><img src="{{ asset("Assets/image/external-audio-video-conference-kosonicon-flat-kosonicon.png") }}" alt=""></div>
       <!--the js link for the bootrap-->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

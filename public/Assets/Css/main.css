@@ -236,6 +236,10 @@ li a:hover{
     top: 70px;
     /* background-image:var(--first-color); */
 }
+.image{
+    margin-left: 3rem;
+    animation: image 5s both infinite;
+}
 .image img{
     width:300px;
     height:300px;
@@ -245,16 +249,98 @@ li a:hover{
 .title{
     text-align: center;
     font-weight: var(--font-semi-bold);
+    font-size: var(--h1-font);
+    color: var(--first-color);
 }
 .description{
     text-align: center;
 }
 .r{
+    /* border: 1px solid var(--first-color); */
     display: flex;
-    justify-content:center;
+    justify-content:left;
     align-items: center;
     padding-top: 1rem;
+    padding-left:4rem;
 }
 .r h4{
     color: var(--first-color);
+}
+.right{
+    /* border: 2px solid var(--first-color); */
+    background-color: #fff;
+}
+.left{
+   /* border: 1px solid var(--first-color-light); */
+   padding-top: 4rem;
+}
+/* style icon animation */
+.p{
+    position: absolute;
+    top: 140px;
+    left: 750px;
+    width:60px;
+    animation: left 5s both;
+    /* animation: rotate 1s; */
+}
+.c{
+    position: absolute;
+    top: 100px;
+    left: 750px;
+    width:60px;
+    animation:right 5s  backwards;
+}
+.a{
+    position: absolute;
+    top: 120px;
+    left: 1040px;
+    width:60px;
+    animation: left 5s  both;
+}
+.v{
+    position: absolute;
+    top: 100px;
+    left:1040px;
+    width:60px;
+    animation: right 5s  backwards;
+}
+@keyframes left{
+    0%{
+        top: 140px;
+        rotate:0%;
+    }
+    100%{
+        top: 380px;
+        rotate: 360deg;
+    }
+}
+@keyframes right{
+    0%{
+        top: 400px;
+    }
+    100%{
+        top: 100px;
+    }
+}
+@keyframes image{
+    0%{
+        padding: 1rem;
+    }
+    100%{
+        padding: 1px;
+    }
+}
+@keyframes rotate{
+
+    0% {
+        rotate: 0deg;
+      }
+      100% {
+        rotate: 360deg;
+      }
+}
+.brand{
+ width:40px;
+height: 20px;
+
 }
