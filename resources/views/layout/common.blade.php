@@ -16,13 +16,16 @@
 </head>
 <body class="">
       <!--this is the header part -->
-      <header class="header shadow-sm pb-2" id="header">
-             <nav class="nav container">
-                 <a href="#" class="nav__logo"><div class="brand"><img src="{{ asset("Assets/image/brainstorm.png") }}" alt=""></div>HelpBro</a>
+      <header class="header container-fluid shadow-sm pb-2" id="header">
+             <nav class="nav container  pb-2">
+                 <a href="#" class="nav__logo">
+                     <div class="brand"><img src="{{ asset("Assets/image/brainstorm.png") }}" alt=""></div>
+                 <h5> HelpBro</h5> 
+                    </a>
                  <div class="nav__menu">
                      <ul class="nav__list">
                          <li class="nav__item">
-                             <a href="" class="nav_link">
+                             <a href="" class="nav_link active">
                                  <i class="bx bx-home-alt-2"></i>
                                  <span>Home</span>
                              </a>
@@ -58,28 +61,29 @@
              <div class="row">
                  <div class="col-lg-7 col-sm-12 col-md-6 left">
                        <h1 class="title">
-                           Welcome To Our Website
+                           Welcome To Our Website<br>
+                           This Is Free For All Students....
                        </h1>
-                       <p class="description">
+                       {{-- <p class="description">
                            This is website is help your by communicating with you simple
                            This is website is help your by communicating with you simple
                            This is website is help your by communicating with you simple
-                       </p>
-                       <div class="info text-center">
-                            <h5 class="message" style="color: black;">The People You Can Get For Communication</h5>
-                            <div class="container">
+                       </p>--}}
+                       <div class="info">
+                            <h5 class="message">The Peoples You Can Get For Communications<br> In Jimma Universty........</h5>
+                            <div class="container-fluid">
                                 <div class="row r">
-                                     <div class="col-lg-3 col-md-4 col-sm-12 pl-3 shadow-lg">
+                                     <div class="col-lg-3 col-md-4 col-sm-12 shadow-lg">
                                          <h4>Students</h4>
-                                         <h3>+0</h3>
+                                         <h3>+50</h3>
                                      </div>
                                      <div class="col-lg-3 col-md-4 col-sm-12 shadow-sm">
                                         <h4>Teachers</h4>
-                                        <h3>+0</h3>
+                                        <h3>+10</h3>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-12 shadow-lg">
                                         <h4>Prophesers</h4>
-                                        <h3>+0</h3>
+                                        <h3>+10</h3>
                                     </div>
                                 </div>
                             </div>
@@ -92,13 +96,25 @@
                  </div>
              </div>
       </section>
-
-
-      {{-- the end advert--}}
-      <main>
-        @yield('home')
-      </main>
-      <!--this is the footer part-->
+      <section class="f">
+             <h1>Fetures</h1>
+             <div class="gr">
+                <div class="f1"></div>
+                <div class="f1"></div>
+                <div class="f1"></div>
+                <div class="f1"></div>
+             </div>
+      </section>
+      <section class="service">
+              <h1>SERVICES</h1>
+              <div class="gr">
+                <div class="f1"></div>
+                <div class="f1"></div>
+                <div class="f1"></div>
+                <div class="f1"></div>
+              </div>
+      </section>
+      
       <footer class="footer section">
           
       </footer>

@@ -139,13 +139,16 @@ ul{
 }
 /* header part styling using css */
 .header{
-    position: fixed;
+    /* border: 1px solid black; */
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     background-color: transparent;
-    z-index: var(--z-fixed);
+    z-index:999;
     transition: .4s;
+    padding: 0.4rem;
+    overflow: hidden;
     /* border-bottom: 5px solid var(--first-color); */
 }
 .nav{
@@ -154,10 +157,13 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
+    /* border:1px solid green; */
 }
 .nav__logo{
-    display: inline-flex;
+    /* border:1px solid green; */
+    display:flex;
+    justify-content: center;
     align-items: center;
     column-gap: .24rem;
     font-weight: var(--font-medium);
@@ -196,29 +202,44 @@ ul{
     }
 }
 /* styling the nav list  */
+.nav__menu{
+    padding-top: 0.5rem;
+}
 .nav__list{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border:1px solid green; */
 }
 .nav__item{
+    position: relative;
     padding-right: 1rem;
     padding-left: 1rem;
     padding-top: 1rem;
 }
 .nav__link{
-    color:var(--text-color);
+    /* color:var(--text-color); */
     display: flex;
-    padding: .5rem;
+    justify-content: center;
+    align-items: center;
+    /* padding: .5rem; */
     border-radius: 50%;
 }
-li a:hover{
-    color:#000;
+li a:hover,li a .active{
+    color:rgb(231, 228, 6);
 }
-.nav__item:hover{
-    border-bottom: 5px solid  var(--first-color);
-    padding-bottom: 6px;
-    transition: .5s;
+li a.active{
+    color:rgb(231, 228, 6);
+}
+.nav .nav__item a.active::after,
+li a:hover::after{
+     content:"";
+     width: 50%;
+     height: 4px;
+     position: absolute;
+     background-color: var(--first-color);
+     left:20px;
+     bottom:-4px ;
 }
 .group_button a{
     margin-left:0.5rem;
@@ -230,13 +251,15 @@ li a:hover{
 }
 /* the advert section styling */
 .advert{
-    height:400px;
+    /* height:400px; */
     /* background-color:#fff; */
     position: relative;
-    top: 70px;
+    overflow: hidden;
+    /* top: 70px; */
+    /* border: 1px solid black; */
     /* background-image:var(--first-color); */
 }
-.image{
+.image img{
     margin-left: 3rem;
     animation: image 5s both infinite;
 }
@@ -247,21 +270,26 @@ li a:hover{
     border-radius:125px 125px 10px 10px;
 }
 .title{
-    text-align: center;
     font-weight: var(--font-semi-bold);
     font-size: var(--h1-font);
-    color: var(--first-color);
+    color:rgb(8, 189, 39);
 }
 .description{
     text-align: center;
 }
+.info{
+    padding: 0px;
+}
 .r{
     /* border: 1px solid var(--first-color); */
     display: flex;
-    justify-content:left;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 1rem;
-    padding-left:4rem;
+    padding-top: 2rem;
+    /* padding-left:4rem; */
+}
+.message{
+    color: wheat;
 }
 .r h4{
     color: var(--first-color);
@@ -269,10 +297,11 @@ li a:hover{
 .right{
     /* border: 2px solid var(--first-color); */
     background-color: #fff;
+    /* border: 1px solid var(--first-color); */
 }
 .left{
    /* border: 1px solid var(--first-color-light); */
-   padding-top: 4rem;
+   padding: 5rem 0rem 0rem 3rem;
 }
 /* style icon animation */
 .p{
@@ -341,6 +370,30 @@ li a:hover{
 }
 .brand{
  width:40px;
-height: 20px;
-
+ height: 20px;
+}
+/* feture styling */
+.f{
+    height: 50px;
+    text-align: center;
+    padding-top:4rem;
+}
+.service{
+    position: relative;
+    height: 50px;
+    text-align: center;
+    padding-top:20rem;
+    z-index: 1110;
+}
+.f1{
+    width: 200px;
+    height:150px;
+    box-shadow: 15px 15px 10px var(--first-color-lighten);
+}
+.gr{
+    /* background-color:rgb(23, 226, 84); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
