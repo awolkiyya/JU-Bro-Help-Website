@@ -49,9 +49,9 @@
                   <a href="{{ url('Guest') }}" class="button nav__button">
                         Guest
                   </a>
-                  <a href="{{ url('Login') }}" class="button nav__button">
+                  <a href="javascript:;" class="trigger button nav__button page-wrapper">
                         Login
-                 </a>
+                  </a>
                  </div>
                 
              </nav>
@@ -114,6 +114,33 @@
                 <div class="f1"></div>
               </div>
       </section> --}}
+      {{-- pop up windows --}}
+  <div class="window_cont">
+    
+  </div>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Sign In </h2>
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+      </div>
+  
+      <!-- Login Form -->
+      <form>
+        <input type="email" id="login" class="fadeIn second" name="email" placeholder="Email">
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>
           <!-- Site footer -->
     <footer class="site-footer shadow-lg">
         <div class="container">
