@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  {{-- some changes are there then  --}}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
