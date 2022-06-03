@@ -19,7 +19,7 @@
       <!--this is the header part -->
       <header class="header container-fluid shadow-sm pb-2" id="header">
              <nav class="nav container  pb-2">
-                 <a href="#" class="nav__logo">
+                 <a href="{{ route("home") }}" class="nav__logo">
                      <div class="brand"><img src="{{ asset("Assets/image/brainstorm.png") }}" alt=""></div>
                  <h5> HelpBro</h5> 
                     </a>
@@ -50,99 +50,17 @@
                   <a href="{{ url('Guest') }}" class="button nav__button">
                         Guest
                   </a>
-                  <a href="javascript:;" class="trigger button nav__button page-wrapper">
+                  <a href="{{ route("login")}}" class="button nav__button">
                         Login
                   </a>
                  </div>
                 
              </nav>
       </header>
-      {{-- the start advert --}}
-      <section class="advert container">
-             <div class="row">
-                 <div class="col-lg-7 col-sm-12 col-md-6 left">
-                       <h1 class="title">
-                           Welcome To Our Website<br>
-                           This Is Free For All Students....
-                       </h1>
-                       {{-- <p class="description">
-                           This is website is help your by communicating with you simple
-                           This is website is help your by communicating with you simple
-                           This is website is help your by communicating with you simple
-                       </p>--}}
-                       <div class="info">
-                            <h5 class="message">The Peoples You Can Get For Communications<br> In Jimma Universty........</h5>
-                            <div class="container-fluid">
-                                <div class="row r">
-                                     <div class="col-lg-3 col-md-4 col-sm-12 shadow-lg">
-                                         <h4>Students</h4>
-                                         <h3>+50</h3>
-                                     </div>
-                                     <div class="col-lg-3 col-md-4 col-sm-12 shadow-sm">
-                                        <h4>Teachers</h4>
-                                        <h3>+10</h3>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-12 shadow-lg">
-                                        <h4>Prophesers</h4>
-                                        <h3>+10</h3>
-                                    </div>
-                                </div>
-                            </div>
-                       </div>
-                 </div>
-                 <div class="col-lg-5 col-sm-12 col-md-6 right">
-                         <div class="image mt-5">
-                             <img src="{{ asset("Assets/image/external-advice-training-and-coaching-wanicon-flat-wanicon.png") }}" alt="The image is not found">
-                         </div>
-                 </div>
-             </div>
-      </section>
-      {{-- <section class="f">
-             <h1>Fetures</h1>
-             <div class="gr">
-                <div class="f1"></div>
-                <div class="f1"></div>
-                <div class="f1"></div>
-                <div class="f1"></div>
-             </div>
-      </section> --}}
-      {{-- <section class="service">
-              <h1>SERVICES</h1>
-              <div class="gr">
-                <div class="f1"></div>
-                <div class="f1"></div>
-                <div class="f1"></div>
-                <div class="f1"></div>
-              </div>
-      </section> --}}
-      {{-- pop up windows --}}
-  <div class="window_cont">
-    
-  </div>
-  <div class="wrapper fadeInDown">
-    <div id="formContent">
-      <!-- Tabs Titles -->
-      <h2 class="active"> Sign In </h2>
-      <!-- Icon -->
-      <div class="fadeIn first">
-        <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-      </div>
-  
-      <!-- Login Form -->
-      <form>
-        <input type="email" id="login" class="fadeIn second" name="email" placeholder="Email">
-        <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-        <input type="submit" class="fadeIn fourth" value="Log In">
-      </form>
-  
-      <!-- Remind Passowrd -->
-      <div id="formFooter">
-        <a class="underlineHover" href="#">Forgot Password?</a>
-      </div>
-  
-    </div>
-  </div>
+     {{-- the home section --}}
+     @yield("home")
           <!-- Site footer -->
+     @yield("login")
     <footer class="site-footer shadow-lg">
         <div class="container">
           <div class="row">
@@ -188,11 +106,11 @@
           </div>
         </div>
   </footer>
-      {{-- animation icon in the page --}}
-      <div class="p"><img src="{{ asset("Assets/image/half-rest.png") }}" alt=""></div>
+      {{-- {{-- animation icon in the page --}}
+      {{-- <div class="p"><img src="{{ asset("Assets/image/half-rest.png") }}" alt=""></div>
       <div class="c"><img src="{{ asset("Assets/image/experimental-camera-arcade.png") }}" alt=""></div>
       <div class="a"><img src="{{ asset("Assets/image/external-audio-disability-flaticons-flat-flat-icons-3.png") }}" alt=""></div>
-      <div class="v"><img src="{{ asset("Assets/image/external-audio-video-conference-kosonicon-flat-kosonicon.png") }}" alt=""></div>
+      <div class="v"><img src="{{ asset("Assets/image/external-audio-video-conference-kosonicon-flat-kosonicon.png") }}" alt=""></div> --}}
       <!--the js link for the bootrap-->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

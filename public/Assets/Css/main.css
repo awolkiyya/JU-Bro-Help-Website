@@ -406,6 +406,7 @@ li a:hover::after{
   font-size:15px;
   line-height:24px;
   color:#737373;
+  border-radius: 30px 30px 0px 0px;
 }
 .site-footer hr
 {
@@ -565,15 +566,42 @@ li a:hover::after{
 svg{
     width: 20px;
 }
-/* the popup styling */
+/* the service parts */
+.service1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#fff;
+    flex-direction: column;
+}
+.list{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
+}
+.l{
+  width: 400px;
+  height: 400px;
+  background:#fff;
+  margin: 1rem;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+.list:first-child{
+  float: left;
+}
+/* the contact us form */
 
 /* STRUCTURE */
 
 .wrapper {
   display: flex;
-  align-items: center;
+  align-items:center;
   flex-direction: column; 
-  justify-content: center;
+  justify-content:center;
   width: 100%;
   min-height: 100%;
   padding: 20px;
